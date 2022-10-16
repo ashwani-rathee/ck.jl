@@ -5,7 +5,7 @@ using JSON
 using FileIO
 using Images
 using ImageInTerminal
-using Sixel
+# using Sixel
 
 export catto
 
@@ -15,7 +15,7 @@ function get_image(url)
         download(url, fn)
         load(fn)
     end
-    img_resized = imresize(img, ratio = 1 / 2)
+    img_resized = imresize(img, 500, 500)
 end
 
 function catto()
