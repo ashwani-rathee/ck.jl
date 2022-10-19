@@ -19,9 +19,9 @@ function get_image(url)
 end
 
 function catto()
-    res = HTTP.get("https://api.thecatapi.com/v1/images/search")
-    imgdict = JSON.parse(String(res.body))[1]
-    return get_image(imgdict["url"])
+    res = HTTP.get("https://cutekitty.pythonanywhere.com/catto/random/")
+    imgdict = JSON.parse(String(res.body))
+    return get_image(imgdict["img"])
 end
 
 end # module
